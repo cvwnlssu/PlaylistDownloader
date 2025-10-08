@@ -14,9 +14,7 @@ const tracker = {
   video: { downloaded: 0, total: Infinity },
   merged: { frame: 0, speed: '0x', fps: 0 },
 };
-//YTTOKEN = null; //Put token here;
-YTTOKEN = process.env.YTTOKEN;//Put token here
-
+YTTOKEN = process.env.YTTOKEN;
 
 
 

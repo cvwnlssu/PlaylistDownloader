@@ -3,12 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "build": {
-    "appId": "com.yourcompany.yourapp",
-    "mac": {
-      "icon": "goofydownload.icns"
-    }
-  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -37,43 +31,5 @@
     "downloads-folder": "^3.0.3",
     "ffmpeg-static": "^5.2.0",
     "youtube-search": "^1.1.6"
-  },
-  "config": {
-    "forge": {
-      "packagerConfig": {},
-      "makers": [
-        {
-          "name": "@electron-forge/maker-zip",
-          "platforms": [
-            "darwin", "win32"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-dmg",
-          "platforms": [
-            "darwin"
-          ]
-        },
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "platforms": ["win32"]
-        }
-      ],
-      "publishers": [
-        {
-          "name": "@electron-forge/publisher-github",
-          "config": {
-            "repository": {
-              "owner": "cvwnlssu",
-              "name": "YouTubePlaylistDownloader"
-            },
-            "prerelease": false, 
-            "draft": true, 
-            "token": "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"
-          }
-        }
-      ]
-    }
-    
   }
 }

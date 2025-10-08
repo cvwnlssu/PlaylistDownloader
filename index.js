@@ -8,12 +8,14 @@ const ffmpeg = require('ffmpeg-static');
 const { Notification } = require('electron')
 const { ipcRenderer } = require('electron');
 const downloadsFolder = require('downloads-folder');
+
 const tracker = {
   start: Date.now(),
   audio: { downloaded: 0, total: Infinity },
   video: { downloaded: 0, total: Infinity },
   merged: { frame: 0, speed: '0x', fps: 0 },
 };
+
 YTTOKEN = process.env.YTTOKEN;
 
 

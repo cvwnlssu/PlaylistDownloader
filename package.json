@@ -1,0 +1,79 @@
+{
+  "name": "ytplaylistdl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "build": {
+    "appId": "com.yourcompany.yourapp",
+    "mac": {
+      "icon": "goofydownload.icns"
+    }
+  },
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish"
+  },
+  "author": "JL",
+  "license": "ISC",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.9.0",
+    "@electron-forge/maker-deb": "^7.9.0",
+    "@electron-forge/maker-dmg": "^7.9.0",
+    "@electron-forge/maker-rpm": "^7.9.0",
+    "@electron-forge/maker-squirrel": "^7.9.0",
+    "@electron-forge/maker-zip": "^7.9.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.9.0",
+    "@electron-forge/plugin-fuses": "^7.9.0",
+    "@electron-forge/publisher-github": "^7.9.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "^38.1.2"
+  },
+  "dependencies": {
+    "@distube/ytdl-core": "^4.16.12",
+    "child_process": "^1.0.2",
+    "dotenv": "^17.2.2",
+    "downloads-folder": "^3.0.3",
+    "ffmpeg-static": "^5.2.0",
+    "youtube-search": "^1.1.6"
+  },
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin", "win32"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "platforms": ["win32"]
+        }
+      ],
+      "publishers": [
+        {
+          "name": "@electron-forge/publisher-github",
+          "config": {
+            "repository": {
+              "owner": "cvwnlssu",
+              "name": "YouTubePlaylistDownloader"
+            },
+            "prerelease": false, 
+            "draft": true, 
+            "token": "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"
+          }
+        }
+      ]
+    }
+    
+  }
+}
